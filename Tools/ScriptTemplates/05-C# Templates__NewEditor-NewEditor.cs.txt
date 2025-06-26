@@ -1,0 +1,16 @@
+using UnityEditor;
+using UnityEngine;
+
+[CustomEditor(typeof(#SCRIPTNAME#))]
+public class #SCRIPTNAME#: Editor
+{
+    private void OnEnable()
+    {
+	#NOTRIM#
+    }
+
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+    }
+}

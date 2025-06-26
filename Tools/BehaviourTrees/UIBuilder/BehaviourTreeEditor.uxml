@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/BehaviourTrees/UIBuilder/BehaviourTreeEditorStyle.uss?fileID=7433441132597879392&amp;guid=1516207c6b035164e95ffb7a15ab25f4&amp;type=3#BehaviourTreeEditorStyle" />
+    <uie:Toolbar>
+        <uie:ToolbarMenu tabindex="-1" display-tooltip-when-elided="true" text="Assets" />
+    </uie:Toolbar>
+    <SplitView fixed-pane-initial-dimension="300">
+        <ui:VisualElement name="Left-Panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <SplitView fixed-pane-initial-dimension="300" orientation="Vertical">
+                <ui:VisualElement name="Inspector-Container">
+                    <ui:Label tabindex="-1" text="Inspector" display-tooltip-when-elided="true" style="background-color: rgb(40, 40, 40);" />
+                    <InspectorView name="InspectorView" />
+                </ui:VisualElement>
+                <ui:VisualElement name="blackboard-container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Label tabindex="-1" text="Blackboard" display-tooltip-when-elided="true" style="background-color: rgb(40, 40, 40);" />
+                    <ui:IMGUIContainer />
+                </ui:VisualElement>
+            </SplitView>
+        </ui:VisualElement>
+        <ui:VisualElement name="Right-Panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <ui:Label tabindex="-1" text="Tree View" display-tooltip-when-elided="true" style="background-color: rgb(40, 40, 40);" />
+            <BehaviourTreeView focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </SplitView>
+    <ui:VisualElement name="Overlay" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.59);">
+        <ui:VisualElement style="flex-grow: 1; max-width: 533px; max-height: 250px; min-height: 250px; min-width: 533px; background-color: rgb(56, 56, 56); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+            <ui:VisualElement style="flex-grow: 1; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; background-color: rgb(56, 56, 56);">
+                <ui:Label tabindex="-1" text="Create New Tree" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(210, 210, 210); font-size: 25px; -unity-font-style: bold;" />
+                <ui:Button text="x" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitButton" focusable="false" style="flex-direction: row-reverse; align-self: flex-start; justify-content: flex-start; align-items: auto; white-space: nowrap; -unity-text-align: upper-center; -unity-font-style: bold; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; position: absolute; flex-wrap: wrap-reverse; margin-top: 0; margin-right: 2px; margin-bottom: 0; margin-left: 2px; padding-top: 0; padding-right: 2px; padding-bottom: 0; padding-left: 2px; top: 0; right: 0;" />
+                <ui:VisualElement style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Name" value="New Behaviour Tree" name="TreeName" style="margin-top: 3px; margin-right: 3px; margin-bottom: 20px; margin-left: 1px; color: rgb(210, 210, 210); font-size: 12px; -unity-font-style: bold; -unity-text-outline-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-color: rgba(0, 0, 0, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                <ui:TextField picking-mode="Ignore" label="Location" value="Assets/" name="LocationPath" style="margin-top: 3px; margin-right: 3px; margin-bottom: 20px; margin-left: 1px; color: rgb(210, 210, 210); font-size: 12px; -unity-font-style: bold; -unity-text-outline-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-color: rgba(0, 0, 0, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                <ui:VisualElement style="flex-grow: 1;" />
+                <ui:Button text="Create" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CreateButton" style="min-height: 40px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

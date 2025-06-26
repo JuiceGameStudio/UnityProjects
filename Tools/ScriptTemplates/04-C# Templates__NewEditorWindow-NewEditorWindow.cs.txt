@@ -1,0 +1,22 @@
+using UnityEditor;
+using UnityEngine;
+
+public class #SCRIPTNAME# : EditorWindow
+{
+    
+    [MenuItem("Window/#SCRIPTNAME#")]
+    public static void ShowWindow()
+    {
+        EditorWindow.GetWindow(typeof(#SCRIPTNAME#));
+    }
+
+    private void OnEnable()
+    {
+        #NOTRIM#
+    }
+    
+    void OnGUI()
+    {
+        #NOTRIM#
+    }
+}
